@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back2"
+    tools:context=".cartbuymedicineActivity">
+
+    <EditText
+        android:id="@+id/feesmedicinecart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:clickable="false"
+
+        android:ems="10"
+
+
+        android:text="nio"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/ll"
+        app:layout_constraintEnd_toStartOf="@+id/checkoutmedicinecart"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listview_medicinecart" />
+
+    <TextView
+        android:id="@+id/headingmedicinecart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:text="24*7 Healthcare"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/subheadingmedicinecart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:text="Lab Test Cart Items"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingmedicinecart"
+        app:layout_constraintVertical_bias="0.0">
+
+    </TextView>
+    <ListView
+        android:id="@+id/listview_medicinecart"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subheadingmedicinecart"
+        app:layout_constraintVertical_bias="0.018">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/checkoutmedicinecart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Checkout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listview_medicinecart" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/feesmedicinecart"
+        app:layout_constraintVertical_bias="0.884"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/datetexmedicinecart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="15dp"
+                android:textSize="15dp"
+                android:layout_marginStart="16dp"
+                android:text="Select Date"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/datemedicinecart"
+                app:layout_constraintEnd_toStartOf="@+id/timetextmedicinecart"
+                app:layout_constraintHorizontal_bias="0.07"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feesmedicinecart"
+                app:layout_constraintVertical_bias="0.947" />
+
+
+            <Button
+                android:id="@+id/datemedicinecart"
+                style="?android:spinnerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="40dp"
+
+                android:text="DD/MM/YY"
+
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="601dp" />
+
+            <Button
+                android:id="@+id/backmedicinecart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:text="BACK"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.959"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/listview_medicinecart"
+                app:layout_constraintVertical_bias="0.965" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
